@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaanz Food Products</title>
+<style>
+/* Reset and Fonts */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Background Slideshow */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slideShow 15s infinite;
+}
+
+.slideshow img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideShow {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Hero Text */
+.overlay h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.scroll-arrow {
+    font-size: 2rem;
+    margin-top: 10px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* Notice */
+.notice {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Products Section */
+.products {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-weight: bold;
+}
+
+/* Buttons Section */
+.buttons {
+    text-align: center;
+    padding: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    background: #d62828;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #a71d2a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<!-- Hero Section with Slideshow -->
+<section class="hero">
+    <div class="slideshow">
+        <img src="images/spices.jpg" alt="Spices">
+        <img src="images/black-pepper.jpg" alt="Black Pepper">
+        <img src="images/coconut-oil.jpg" alt="Coconut Oil">
+    </div>
+    <div class="overlay">
+        <div class="logo"><img src="images/Shaanz.JPG" alt="Shaanz Logo"></div>
+        <h1>Shaanz Food Products</h1>
+        <p>Luxury You Can Taste.</p>
+        <div class="scroll-arrow">&#8595;</div>
+    </div>
+</section>
+
+<!-- Notice -->
+<div class="notice">
+    Notice: As of right now we have not started production so there are limited products, some images may be blurry.
+</div>
+
+<!-- Products -->
+<section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+        <div class="product-card"><img src="images/fenugreek.jpg" alt="Fenugreek"><p>Fenugreek Seeds</p></div>
+        <div class="product-card"><img src="images/sambar.jpg" alt="Sambar"><p>Sambar Powder</p></div>
+        <div class="product-card"><img src="images/chilli.jpg" alt="Chilli"><p>Chilli Powder</p></div>
+        <div class="product-card"><img src="images/coconut-oil.jpg" alt="Coconut Oil"><p>Coconut Oil</p></div>
+        <div class="product-card"><img src="images/matta.jpg" alt="Matta Rice"><p>Matta Rice</p></div>
+        <div class="product-card"><img src="images/ponni.jpg" alt="Ponni Rice"><p>Ponni Rice</p></div>
+    </div>
+</section>
+
+<!-- Buttons -->
+<section class="buttons">
+    <a href="about.html" class="btn">About Us</a>
+    <a href="founder.html" class="btn">Our Founder</a>
+    <a href="million-builders.html" class="btn">Million Builders</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    Shaanz Food Products &copy; 2025 | Where Purity Meets Perfection.
+</footer>
+
+</body>
+</html>
